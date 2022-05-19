@@ -1,0 +1,38 @@
+html {
+    font-size: 16px;
+}
+p {
+    font-size: 3rem;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    background-color: #d3fbff; /* Green */
+    margin: 0.625rem;
+    color: white;
+    padding: 0.9375rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+    height: 10rem;
+    width: 10rem;
+}
+button:hover {
+    background-color:#5d86f9;
+    transition: 0.7s;
+}
+.active {
+    background-color: #ffbf00;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+}
