@@ -1,14 +1,57 @@
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
 function initMatrix(btn) {
     if (getRandomInt(2) === 1) {
-        btn.classList.add("active");
-        console.log(getRandomInt(2)); 
+        btn.classList.add("active");    }
+        else {
+            btn.classList.add("inactive");
+        }
     }
-    else {
-        btn.classList.add("inactive");
-    }
+function init() {
+    initMatrix(btn_1);
+    initMatrix(btn_2);
+    initMatrix(btn_3);
+    initMatrix(btn_4);
+    initMatrix(btn_5);
+    initMatrix(btn_6);
+    initMatrix(btn_7);
+    initMatrix(btn_8);
+    initMatrix(btn_9);
+    initMatrix(btn_10);
+    initMatrix(btn_11);
+    initMatrix(btn_12);
+    initMatrix(btn_13);
+    initMatrix(btn_14);
+    initMatrix(btn_15);
+    initMatrix(btn_16);
+
+}
+function deleteColors(btn) {
+    btn.classList.remove("active");
+}
+function sleepforMatrix() {
+    sleep(4000).then(() => {
+        deleteColors(btn_1);
+        deleteColors(btn_2);
+        deleteColors(btn_3);
+        deleteColors(btn_4);
+        deleteColors(btn_5);
+        deleteColors(btn_6);
+        deleteColors(btn_7);
+        deleteColors(btn_8);
+        deleteColors(btn_9);
+        deleteColors(btn_10);
+        deleteColors(btn_11);
+        deleteColors(btn_12);
+        deleteColors(btn_13);
+        deleteColors(btn_14);
+        deleteColors(btn_15);
+        deleteColors(btn_16);
+    });
 }
 var btn_1 = document.getElementById('btn_1');
 var btn_2 = document.getElementById('btn_2');
@@ -27,23 +70,8 @@ var btn_14 = document.getElementById('btn_14');
 var btn_15 = document.getElementById('btn_15');
 var btn_16 = document.getElementById('btn_16');
 let change = new Boolean(false);
-initMatrix(btn_1);
-initMatrix(btn_2);
-initMatrix(btn_3);
-initMatrix(btn_4);
-initMatrix(btn_5);
-initMatrix(btn_6);
-initMatrix(btn_7);
-initMatrix(btn_8);
-initMatrix(btn_9);
-initMatrix(btn_10);
-initMatrix(btn_11);
-initMatrix(btn_12);
-initMatrix(btn_13);
-initMatrix(btn_14);
-initMatrix(btn_15);
-initMatrix(btn_16);
-
+init();
+sleepforMatrix();
 // btn_1.addEventListener("click", function() {
 //   if (change === false) {
 //       this.classList.add("active");
