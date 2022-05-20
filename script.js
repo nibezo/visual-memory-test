@@ -11,7 +11,7 @@ function initMatrix(btn) {
         index = index + 1;
     }
     else {
-        btn.classList.add("inactive");
+        btn.classList.add("none");
         matrix[index] = 0;
         index = index + 1;
     }
@@ -61,6 +61,150 @@ function sleepforMatrix() {
     change = true;
     console.log(change);
 }
+function btn_1_Check() {
+    if (matrix[0] == 1) {
+        btn_1.classList.add("active");
+    }
+    else {
+        btn_1.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_2_Check() {
+    if (matrix[1] == 1) {
+        btn_2.classList.add("active");
+    }
+    else {
+        btn_2.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_3_Check() {
+    if (matrix[2] == 1) {
+        btn_3.classList.add("active");
+    }
+    else {
+        btn_3.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_4_Check() {
+    if (matrix[3] == 1) {
+        btn_4.classList.add("active");
+    }
+    else {
+        btn_4.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_5_Check() {
+    if (matrix[4] == 1) {
+        btn_5.classList.add("active");
+    }
+    else {
+        btn_5.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_6_Check() {
+    if (matrix[5] == 1) {
+        btn_6.classList.add("active");
+    }
+    else {
+        btn_6.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_7_Check() {
+    if (matrix[6] == 1) {
+        btn_7.classList.add("active");
+    }
+    else {
+        btn_7.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_8_Check() {
+    if (matrix[7] == 1) {
+        btn_8.classList.add("active");
+    }
+    else {
+        btn_8.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_9_Check() {
+    if (matrix[8] == 1) {
+        btn_9.classList.add("active");
+    }
+    else {
+        btn_9.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_10_Check() {
+    if (matrix[9] == 1) {
+        btn_10.classList.add("active");
+    }
+    else {
+        btn_10.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_11_Check() {
+    if (matrix[10] == 1) {
+        btn_11.classList.add("active");
+    }
+    else {
+        btn_11.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_12_Check() {
+    if (matrix[11] == 1) {
+        btn_12.classList.add("active");
+    }
+    else {
+        btn_12.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_13_Check() {
+    if (matrix[12] == 1) {
+        btn_13.classList.add("active");
+    }
+    else {
+        btn_13.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_14_Check() {
+    if (matrix[13] == 1) {
+        btn_14.classList.add("active");
+    }
+    else {
+        btn_14.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_15_Check() {
+    if (matrix[14] == 1) {
+        btn_15.classList.add("active");
+    }
+    else {
+        btn_15.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
+function btn_16_Check() {
+    if (matrix[15] == 1) {
+        btn_16.classList.add("active");
+    }
+    else {
+        btn_16.classList.add('inactive')
+        incorrect = incorrect + 1;
+    }
+}
 const matrix = [];
 index = 0;
 var btn_1 = document.getElementById('btn_1');
@@ -80,15 +224,54 @@ var btn_14 = document.getElementById('btn_14');
 var btn_15 = document.getElementById('btn_15');
 var btn_16 = document.getElementById('btn_16');
 let change = new Boolean(false);
+let incorrect = 0;
 init();
 sleepforMatrix();
-btn_1.addEventListener("click", function() {
-  if (change === false) {
-      this.classList.add("active");
-      change = true;
-  }
-  else {
-      this.classList.remove("active");
-      change = false;
-  }
+addEventListener("click", function() {
+    console.log('click');
 });
+// btn_2.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_3.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_4.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_5.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_6.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_7.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_8.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_9.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_10.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_11.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_12.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_13.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_14.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_15.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
+// btn_16.addEventListener("click", function() {
+//       this.classList.add("active");
+// });
