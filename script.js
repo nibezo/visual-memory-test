@@ -6,11 +6,17 @@ function sleep (time) {
 }
 function initMatrix(btn) {
     if (getRandomInt(2) === 1) {
-        btn.classList.add("active");    }
-        else {
-            btn.classList.add("inactive");
-        }
+        btn.classList.add("active");
+        matrix[index] = 1;
+        index = index + 1;
     }
+    else {
+        btn.classList.add("inactive");
+        matrix[index] = 0;
+        index = index + 1;
+    }
+    console.log(matrix);
+}
 function init() {
     initMatrix(btn_1);
     initMatrix(btn_2);
@@ -52,7 +58,11 @@ function sleepforMatrix() {
         deleteColors(btn_15);
         deleteColors(btn_16);
     });
+    change = true;
+    console.log(change);
 }
+const matrix = [];
+index = 0;
 var btn_1 = document.getElementById('btn_1');
 var btn_2 = document.getElementById('btn_2');
 var btn_3 = document.getElementById('btn_3');
@@ -72,61 +82,13 @@ var btn_16 = document.getElementById('btn_16');
 let change = new Boolean(false);
 init();
 sleepforMatrix();
-// btn_1.addEventListener("click", function() {
-//   if (change === false) {
-//       this.classList.add("active");
-//       change = true;
-//   }
-//   else {
-//       this.classList.remove("active");
-//       change = false;
-//   }
-// });
-// btn_1.addEventListener("click", function() {
-//     this.classList.add("active");
-// });
-// btn_2.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_3.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_4.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_5.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_6.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_7.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_8.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_9.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_10.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_11.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_12.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_13.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_14.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_15.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
-// btn_16.addEventListener("click", function() {
-//   this.classList.add("active");
-// });
+btn_1.addEventListener("click", function() {
+  if (change === false) {
+      this.classList.add("active");
+      change = true;
+  }
+  else {
+      this.classList.remove("active");
+      change = false;
+  }
+});
